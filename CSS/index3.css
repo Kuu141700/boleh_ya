@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: sans-serif; /* Fallback font */
+    background-color: #333;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Garis putih tipis */
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; /* Montserrat Black */
+    font-size: 2em;
+    color: #fff;
+}
+.dot-orange {
+    color: #FF8C00; /* Warna orange */
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300; /* Montserrat Light */
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #FF8C00; /* Orange color */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #FF8C00; /* Orange color on hover */
+    font-weight: 500; /* Montserrat Medium on hover */
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    gap: 10px; /* Jarak antar gambar */
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    flex: 1; /* Agar lebar gambar dibagi rata */
+    margin: 0 5px; /* Margin tipis dengan halaman */
+    max-width: 25%; /* Memastikan 4 gambar muat dalam satu baris */
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease; /* Untuk animasi jika ada scale atau lainnya */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0; /* Awalnya tersembunyi */
+    background: rgba(0, 0, 0, 0.6); /* Warna overlay transparan */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Teks di bawah */
+    padding: 240px 20px 20px 20px;
+    box-sizing: border-box;
+    opacity: 0; /* Awalnya tidak terlihat */
+    transition: opacity 0.4s ease, height 0.4s ease; /* Animasi untuk opacity dan tinggi */
+}
+
+.image-container:hover .overlay {
+    height: 100%; /* Munculkan overlay */
+    opacity: 1; /* Transparan 60% (dari rgba(0,0,0,0.6) pada background) */
+}
+
+.overlay-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* Poppins Bold */
+    font-size: 2.5em;
+    margin-bottom: 1px;
+}
+
+.overlay-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* Poppins Normal */
+    font-size: 1.3em;
+    line-height: 1.5;
+}
+
+.orange-text {
+    color: #FF8C00;
+}
+
+/* Responsif sederhana */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+}

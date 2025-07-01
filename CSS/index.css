@@ -1,0 +1,24 @@
+:root {
+  --dark-background: #333; /* Slightly lighter black for main background */
+  --header-bg: #e28413; /* Pure accent-orange for header background */
+  --accent-orange: #e28413;
+  --text-light: #fbf5f3; /* Light cream for primary text */
+  --text-secondary: #cccccc; /* A bit darker for secondary text/captions */
+  --hover-darken: rgba(
+    255,
+    255,
+    255,
+    0.05
+  ); /* Subtle white overlay for darkening effect */
+  --hover-draken-header: #af6913;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-background);
+  color: var(--text-light); /* Default text color is light */
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
