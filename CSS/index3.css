@@ -33,6 +33,15 @@ nav ul li {
     margin-left: 30px;
 }
 
+.nav-link1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300; /* Montserrat Light */
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+
+}
+
 .nav-link {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300; /* Montserrat Light */
